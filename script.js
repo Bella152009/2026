@@ -17,7 +17,6 @@ const perguntas = [
                 afirmação: "afirmação"
             }
         ]
-        
     },
     {
         enunciado: "Com a descoberta desta tecnologia, chamada Inteligência Artificial (IA), uma professora de tecnologia da escola decidiu fazer uma sequência de aulas sobre esta tecnologia. No fim de uma aula ela pede que você escreva um trabalho sobre o uso de IA em sala de aula. Qual atitude você toma?",
@@ -31,7 +30,6 @@ const perguntas = [
                 afirmação: "afirmação"
             }
         ],
-        
     },
     {
         enunciado: "Após a elaboração do trabalho, a professora realizou um debate entre a turma para entender como foi realizada a pesquisa e escrita. Nessa conversa também foi levantado um ponto muito importante: como a IA impacta o trabalho do futuro. Nesse debate, como você se posiciona?",
@@ -45,7 +43,6 @@ const perguntas = [
                 afirmação: "afirmação"
             }
         ],
-        
     },
     {
         enunciado: "Ao final da discussão, você precisou criar uma imagem no computador que representasse o que pensa sobre IA. E agora?",
@@ -59,7 +56,6 @@ const perguntas = [
                 afirmação: "afirmação"
             }
         ],
-        
     },
     {
         enunciado: "Você tem um trabalho em grupo de biologia para entregar na semana seguinte, o andamento do trabalho está um pouco atrasado e uma pessoa do seu grupo decidiu fazer com ajuda de uma IA. O problema é que o trabalho está totalmente igual ao do chat. O que você faz?",
@@ -78,15 +74,18 @@ const perguntas = [
     },
 ];
 
-
-
 let atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
 
 function mostraPergunta() {
+    if(atual >= perguntas.length){
+        mostraResultado();
+        return;
+    }
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
+    caixaAlternativa
     mostraAlternativas();
 }
 
