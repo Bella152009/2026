@@ -48,6 +48,12 @@ button:hover{
     color: var(--cor-principal);
 }
 
+.caixa-alternativas{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .caixa-resultado{
     display: none;
 }
